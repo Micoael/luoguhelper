@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    
+    <iframe rameborder="0" scrolling="yes" style="float: left;" width="50%" height="600px" id="page_box" src="http://www.luogu.org"></iframe>
+	<iframe rameborder="0" scrolling="yes" style="float: right;" width="49%" height="600px" id="page_box_sol" src="http://www.luogu.org"></iframe>
+	<input type="text" id="nums" name="num" value="P1001">
+	<button name="submit" onclick="getInput()" > Go </button>
+    <script>
+ var page_box=document.getElementById("page_box");
+ var itse_Id="0";
+ var Timer=null;
+ 
+ function getInput(){
+	var res = document.getElementById("nums").value;
+	itse_Id = res;
+	Jump();
+ }
+ 
+ 
+ function Jump(){
+	page_box.setAttribute("src","http://www.luogu.com.cn"+"/problem/"+itse_Id);
+	page_box_sol.setAttribute("src","http://www.luogu.com.cn"+"/problemnew/solution/"+itse_Id);
+ }
+    </script>
+</body>
+</html>
